@@ -139,6 +139,46 @@ avalanche subnet describe mySubnet --genesis
 }
 ```
 
+### 動作確認コマンド
 
+```bash
+avalanche network status
+```
 
+### ネットワークの削除方法
 
+```bash
+avalanche network clean
+```
+
+### サブネットの削除コマンド
+
+```bash
+avalanche subnet delete mySubnet
+```
+
+### genesis fileを指定して起動させる方法
+
+```bash
+avalanche subnet create mySubnet --genesis genesis/mygenesis.json
+```
+
+result
+
+```bash
+Browser Extension connection details (any node URL from above works):
+RPC URL:          http://127.0.0.1:9652/ext/bc/HbNrSrApX8ZepmMnLcGKhRYuGeEo7vyVzB1S4SsXFWyvNDcgc/rpc
+Funded address:   0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072 with 1000
+Network name:     mySubnet
+Chain ID:         321123
+Currency Symbol:  TEST
+```
+
+## Subnetを作り直す時の手順
+
+- avalanche network clean
+- avalanche subnet delete mySubnet
+- avalanche subnet create mySubnet --genesis genesis/mygenesis.json
+- avalanche subnet deploy mySubnet
+- Metamaskの以前のネットワークを削除し, 新たなネットワークを接続
+- コントラクトを再デプロイする場合はhardhat.configのRPC URLを更新（この先のsectionで扱います）
