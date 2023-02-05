@@ -182,3 +182,7 @@ Currency Symbol:  TEST
 - avalanche subnet deploy mySubnet
 - Metamaskの以前のネットワークを削除し, 新たなネットワークを接続
 - コントラクトを再デプロイする場合はhardhat.configのRPC URLを更新（この先のsectionで扱います）
+
+### ローカルにデプロイするコントラクト
+
+- 0xAa363921A48Eac63F802C57658CdEde768B3DAe1
